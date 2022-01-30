@@ -15,7 +15,7 @@ Cypress.Commands.add('clickCareers', () => {
 });
 
 Cypress.Commands.add('filterByLocation', () => {
-    cy.get('select').select('Anywhere', {force:true} );
+    cy.get('#get_location').select('Anywhere');
 });
 
 Cypress.Commands.add('experiencedAutomationQa', () => {
@@ -36,11 +36,17 @@ Cypress.Commands.add('verifyApplyButton', () => {
 });
 
 Cypress.Commands.add('fillUpApplicationForm', () => {
-    cy.get('#id1-text-cf').contains('Name');
+    cy.get('#cf-1').contains('Name');
     cy.fixture('testApplicationData').then(function(regdata){
         this.regdata=regdata
-        cy.get('#id1-text-cf').contains('Name').type(this.regdata.name1);
-        cy.get('#id2-text-cf').contains('Email').type(this.regdata.email1);
-        cy.get('#uploadtextfield').click();
+        cy.get('#cf-1').type(this.regdata.name);
+        cy.get('#cf-2').type(this.regdata.email);
+        cy.get('#cf-3').type(this.regdata.mobile);
+        cy.get('#cf-5').type(this.regdata.linkedIn);
+        cy.get('#cf-6').type(this.regdata.yourmessage);
+        cy.get('[type="submit"]').click();
+        cy.get('.wpcf7-response-output').contains('One or more fields have an error. Please check and try again.').should('be.visible');
+        cy.wait(2000);
+        cy.get('.close-form').click();
     });
 });

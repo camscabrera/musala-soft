@@ -1,7 +1,37 @@
-{ 
-    "name1": "Test1",
-    "email1": "test123",
-    "mobile1": "123456789",
-    "subject1": "Test data 1",
-    "message1": "This is a test data only."
-}
+[
+    { 
+        "name": "Test1",
+        "email": "test123",
+        "mobile": "+359 2 124 2332",
+        "subject": "Test data 1",
+        "message": "This is a test data only."
+    },
+    { 
+        "name": "Test2",
+        "email": "test123@testing.com",
+        "mobile": "+359 2 124 5564",
+        "subject": "Test data 2",
+        "message": "This is a test data only."
+    },
+    { 
+        "name": "Test3",
+        "email": "test123",
+        "mobile": "+359 2 124 5545",
+        "subject": "Test data 3",
+        "message": "This is a test data only."
+    },
+    { 
+        "name": "Test4",
+        "email": "test123",
+        "mobile": "+359 2 221 0989",
+        "subject": "Test data 4",
+        "message": "This is a test data only."
+    },
+    { 
+        "name": "Test5",
+        "email": "test123",
+        "mobile": "+359 2 841 0927",
+        "subject": "Test data 5",
+        "message": "This is a test data only."
+    }
+]
